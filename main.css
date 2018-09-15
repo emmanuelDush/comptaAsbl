@@ -1,5 +1,13 @@
+#mybody {
+  font-family: "AbeeZee";
+}
+
 .jumbotron {
   font-family: "AbeeZee";
 }
 
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
 /*# sourceMappingURL=main.css.map */
