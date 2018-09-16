@@ -11,6 +11,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
+    <style>
+        /* Make the image fully responsive */
+        a:link, a:visited {
+            color: #154A00;
+        }
+        a:hover, a:active {
+            color: #A1C000; 
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        .card-link div {
+            color:#154A00;
+            font-family: "AbeeZee";
+        }
+        .card-link div:hover{
+            
+            color: #A1C000;
+        } 
+        
+        </style>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -24,13 +46,77 @@
     <script src="main.js"></script>
 </head>
 
-<body>
-    <div class="container">
+<body id="mybody"  style="background: url(images/green-goblin.png);">
+             
+    <nav class="mt-0 navbar navbar-expand-sm  navbar-dark fixed-top" style="background-color:#3A5500">
+        <a class="navbar-brand" href="#">Logo</a>
 
+    </nav>
+    <div class="mt-5 pt-3 p-2 jumbotron jumbotron-fluid " style="background-color:#97B800">
+            <div class="container">
+                <div class=" row">
+
+                    <div class="p-2 col-lg-4" style="background-color:#154A00;">
+                        <div class=" p-3 card" style="height:100%">
+                        <div class="card-bordy">
+                            <h4 class="card-title text-center" > Le pourquoi du site web</h4>
+                            <p class="card-text">
+                                Ce site a été conçu dans le but de pallier au manque d'informations sur l'aspet comptabilité d'une petite asbl. En effet, il y a des nouvelles lois qui régissent la comptabilité que le conseil d'administration  se doit de maîtriser afin d'éviter des amendes. 
+                            <br/> 
+                            C'est ainsi que nous avons mis en forme les informations contenus dans le syllabus <a class=" card-link" href="https://justitie.belgium.be/sites/default/files/downloads/LE%20NOUVEAU%20REGIME%20COMPTABLE%20DES%20PETITES%20ASSOCIATIONS.pdf"> le nouveau regime comptable des petites associations </a>
+                            </p>
+                            
+                            <h5 class="card-title"> Contact</h5>
+                            
+                                <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex  align-items-center"><i class="pr-1  material-icons" style="color:#89A600">location_on</i>  rue vanderkindere 135, 1180 Uccle</li>
+                                <li class="list-group-item d-flex  align-items-center"><i class="pr-1  material-icons" style="color:#89A600"> email </i> info@sikujenga.com </li>    
+                                </ul>  
+                        
+                            
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div class=" p-2  col-lg" style="background-color:#154A00;" >
+                    <div id="mycarou" class="carousel slide" data-ride="carousel">
+
+                        <ul class="carousel-indicators">
+                            <li data-target="#mycarou" data-slide-to="0" class="active"></li>
+                            <li data-target="#mycarou" data-slide-to="1"></li>
+                            <li data-target="#mycarou" data-slide-to="2"></li>
+                        </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/carou/5.jpg" alt="Compta1" width="800" height="500">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/carou/scissors-money.jpg" alt="Compta2" width="800" height="500"> 
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/29.jpg" alt="Compta3" width="800" height="500"> 
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-prev" href="#mycarou" data-slide="prev">
+                            <span class="carousel-control-prev-icon" ></span>
+                        </a>
+                        <a class="carousel-control-next" href="#mycarou" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class=" p-3  container">
+        
         <div id="accordion">
             <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#chapitreOne">Chapitre 1</a>
+                <div class="card-header text-center " style="background-color:#FFFFFF;">
+                    <a class="card-link d-flex justify-content-center" data-toggle="collapse" href="#chapitreOne"> <div class="d-flex justify-content-start" style="width:100%"> <h3>  <span class="p-2 badge badge-pill" style="background-color:#4A6700; color:aliceblue;">Chapitre 1 </span>  <span class="p-2">Un cadre comptable </span> </h3> </div>  </a>
                 </div>
 
                 <div id="chapitreOne" class="collapse " data-parent="#accordion">
@@ -39,77 +125,146 @@
                             <h1> <span class="badge badge-secondary"> Chapitre 1 </span> Un cadre comptable</h1>
 
                             <div class="container">
-                                <h2 style="font-family: 'ABeeZee';">1. Champ d'application</h2>
 
+                                <ul class="nav nav-tabs flex-column" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#champApp"> Champ d'application</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " data-toggle="tab" href="#secParti">Les Secteurs particuliers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#seuils"> Seuils distinguant "petites", "grandes" et "très grandes" associations</a>
+                                    </li>
+                                </ul>
 
-                                <h3>1.1 "Petite" association</h3>
+                                <div class="tab-content">
+                                     <div  id="champApp" class="container tab-pane active"> 
+                                            <h2 style="font-family: 'ABeeZee';">1. Champ d'application</h2>
+                                            <h3 class="card-title">1.1 "Petite" association</h3>
+                                        <div class="card-group"> 
 
-                                <h4> 1.1.1 Définition </h4>
+                                            
+                                            
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> 1.1.1 Définition </h4>
 
-                                <p> La "petite" association est celle qui, à la date de clôture de l’exercice social, n’atteint aucun ou qu'un seul des trois critères suivants : cinq travailleurs, en moyenne annuelle, exprimés en équivalents temps plein.
-                                    Les travailleurs bénévoles, les travailleurs intérimaires et le personnel mis à disposition de l’association n’entrent pas en ligne de compte dans le présent calcul. 250.000,- EUR pour le total des recettes autres qu’exceptionnelles,
-                                    à l'exclusion de la T.V.A. 1.000.000,- EUR pour le total du bilan. La durée normale de l'exercice est de 12 mois. Le début est choisi librement et ne doit pas coïncider avec l'année calendrier. Beaucoup d'associations
-                                    choisissent néanmoins de faire correspondre l'exercice à l'année calendrier en raison de l'obligation de suivre celle-ci en matière d'impôts des personnes morales. Si l'exercice ne correspond pas à 12 mois, on effectuera
-                                    alors un calcul au pro rata pour le critère des recettes (250.000,- EUR).
-                                </p>
+                                                    <p class="card-text"> La "petite" association est celle qui, à la date de clôture de l’exercice social, n’atteint aucun ou qu'un seul des trois critères suivants : cinq travailleurs, en moyenne annuelle, exprimés en équivalents temps plein.
+                                                        Les travailleurs bénévoles, les travailleurs intérimaires et le personnel mis à disposition de l’association n’entrent pas en ligne de compte dans le présent calcul. 250.000,- EUR pour le total des recettes autres qu’exceptionnelles,
+                                                        à l'exclusion de la T.V.A. 1.000.000,- EUR pour le total du bilan. La durée normale de l'exercice est de 12 mois. Le début est choisi librement et ne doit pas coïncider avec l'année calendrier. Beaucoup d'associations
+                                                        choisissent néanmoins de faire correspondre l'exercice à l'année calendrier en raison de l'obligation de suivre celle-ci en matière d'impôts des personnes morales. Si l'exercice ne correspond pas à 12 mois, on effectuera
+                                                        alors un calcul au pro rata pour le critère des recettes (250.000,- EUR).
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> 1.1.2 Recettes </h4>
+                                                    <p class="card-text">
+                                                        Le terme « recettes » est le total des recettes enregistré à l’état des recettes et dépenses (voir schéma minimum normalisé de l’état des recettes et dépenses) déduction faite des recettes exceptionnelles. Il s'agit donc de toutes les recettes découlant
+                                                        des activités normales de l'association. Quelques exemples : versements des membres, versements effectués par les occupants d'un foyer de jeunes, recettes d'une représentation théâtrale, intérêts perçus des placements
+                                                        en banque, ... N'appartiennent pas aux recettes visées ci-dessus : recettes provenant de la vente de mobilier à l'occasion d'une rénovation, recettes perçues lors de l'obtention d'un prêt, legs, …
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-group">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> 1.1.3 Total du bilan </h4>
 
-                                <h4> 1.1.2 Recettes </h4>
-                                <p>
-                                    Le terme « recettes » est le total des recettes enregistré à l’état des recettes et dépenses (voir schéma minimum normalisé de l’état des recettes et dépenses) déduction faite des recettes exceptionnelles. Il s'agit donc de toutes les recettes découlant
-                                    des activités normales de l'association. Quelques exemples : versements des membres, versements effectués par les occupants d'un foyer de jeunes, recettes d'une représentation théâtrale, intérêts perçus des placements
-                                    en banque, ... N'appartiennent pas aux recettes visées ci-dessus : recettes provenant de la vente de mobilier à l'occasion d'une rénovation, recettes perçues lors de l'obtention d'un prêt, legs, …
-                                </p>
+                                                    <p class="card-text">
+                                                        Le deuxième calcul consistera à déterminer le montant du total du bilan. Comme la "petite" association ne tient pas de comptabilité complète, on devra s'appuyer sur l'état du patrimoine qui doit être dressé annuellement lors de l'inventaire, c'est-à-dire
+                                                        le total de la colonne "avoirs". Ces avoirs peuvent être valorisés soit à leur valeur actuelle, soit à leur valeur historique. Il relève d'ailleurs de la responsabilité des administrateurs de fixer clairement les règles
+                                                        d'évaluation donnant lieu à l'établissement de l'état du patrimoine. Ces règles d'évaluation ne peuvent pas être établies dans le but d'éviter d'atteindre le montant limite de 1.000.000,- EUR.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> 1.1.4 Régime particulier pour les nouvelles associations </h4>
+                                                    <p class="card-text">
+                                                        Lors de la création d'une association, le Conseil d'administration fera une évaluation prudente des recettes espérées, du bilan total et des travailleurs. Ces données se retrouvent normalement dans le budget. Sur base de cette évaluation, il détermine
+                                                        si l’association correspond ou pas aux critères des petites associations.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                <h4> 1.1.3 Total du bilan </h4>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> 1.1.5 Régime à option </h4>
+                                                    <p class="card-text">
+                                                        La « petite » association peut opter volontairement pour le système de comptabilité de la "grande" association et tenir une comptabilité complète. Si le Conseil d'administration choisit ce système, il doit le suivre au moins durant trois ans et en faire
+                                                        également mention dans l’annexe.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        
+                                        
+                                    </div>
 
-                                <p>
-                                    Le deuxième calcul consistera à déterminer le montant du total du bilan. Comme la "petite" association ne tient pas de comptabilité complète, on devra s'appuyer sur l'état du patrimoine qui doit être dressé annuellement lors de l'inventaire, c'est-à-dire
-                                    le total de la colonne "avoirs". Ces avoirs peuvent être valorisés soit à leur valeur actuelle, soit à leur valeur historique. Il relève d'ailleurs de la responsabilité des administrateurs de fixer clairement les règles
-                                    d'évaluation donnant lieu à l'établissement de l'état du patrimoine. Ces règles d'évaluation ne peuvent pas être établies dans le but d'éviter d'atteindre le montant limite de 1.000.000,- EUR.
-                                </p>
-                                <h4> 1.1.4 Régime particulier pour les nouvelles associations </h4>
-                                <p>
-                                    Lors de la création d'une association, le Conseil d'administration fera une évaluation prudente des recettes espérées, du bilan total et des travailleurs. Ces données se retrouvent normalement dans le budget. Sur base de cette évaluation, il détermine
-                                    si l’association correspond ou pas aux critères des petites associations.
-                                </p>
+                                    <div id="secParti" class="container tab-pane fade">
+                                        <h2 class="card-title">2. Les Secteurs particuliers</h2>
+                                        <div class="card-group">
+                                            
+                                            
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"> 2.1 Disposition générale sur la tenue de la comptabilité</h3>
 
-                                <h4> 1.1.5 Régime à option </h4>
-                                <p>
-                                    La « petite » association peut opter volontairement pour le système de comptabilité de la "grande" association et tenir une comptabilité complète. Si le Conseil d'administration choisit ce système, il doit le suivre au moins durant trois ans et en faire
-                                    également mention dans l’annexe.
-                                </p>
+                                                    <p class="card-text">
+                                                        Si une association est soumise par un règlement ou une législation spéciale à des obligations comptables au moins semblables à celles décrites ici, elle sera alors dispensée de la tenue de la comptabilité évoquée dans la loi sur les associations (p.e.
+                                                        un petit hôpital qui est tenu de rédiger ses comptes selon le plan comptable des hôpitaux prévu par l’ arrêté royal du 14 août 1987).
 
-                                <h2>2. Les Secteurs particuliers</h2>
-                                <h3> 2.1 Disposition générale sur la tenue de la comptabilité</h3>
+                                                    </p>
+                                                </div>
+                                            </div>
 
-                                <p>
-                                    Si une association est soumise par un règlement ou une législation spéciale à des obligations comptables au moins semblables à celles décrites ici, elle sera alors dispensée de la tenue de la comptabilité évoquée dans la loi sur les associations (p.e.
-                                    un petit hôpital qui est tenu de rédiger ses comptes selon le plan comptable des hôpitaux prévu par l’ arrêté royal du 14 août 1987).
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"> 2.2 Qui décide de l’équivalence « des règles » ?
+                                                    </h3>
+                                                    <p class="card-text">
+                                                        L'appréciation de l'équivalence des règles ressort de la compétence et de la responsabilité du Conseil d’administration de l’association et, le cas échéant, est placée sous le contrôle du commissaire. D'une manière générale, cette équivalence ne découle
+                                                        pas uniquement du fait que l'association, pour l'obtention de subsides, doit fournir des renseignements d'ordre comptable à l'autorité subsidiante.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                </p>
-                                <h3> 2.2 Qui décide de l’équivalence « des règles » ?
-                                </h3>
-                                <p>
-                                    L'appréciation de l'équivalence des règles ressort de la compétence et de la responsabilité du Conseil d’administration de l’association et, le cas échéant, est placée sous le contrôle du commissaire. D'une manière générale, cette équivalence ne découle
-                                    pas uniquement du fait que l'association, pour l'obtention de subsides, doit fournir des renseignements d'ordre comptable à l'autorité subsidiante.
-                                </p>
-                                <h2>3. Seuils distinguant "petites", "grandes" et "très grandes" associations</h2>
+                                    <div id="seuils" class="container tab-pane fade"> 
+                                        <h2 class="card-title">3. Seuils distinguant "petites", "grandes" et "très grandes" associations</h2>
+                                        <div class="card-group">
 
-                                <h3>3.1 Régime à option pour la « petite » association</h3>
-                                <p>
-                                    Pour rappel et sauf règles particulières, les "petites" associations sont soumises à une comptabilité simplifiée telle que définie ci-dessus. Il est néanmoins permis à ces mêmes "petites" associations de se soumettre volontairement aux obligations comptables
-                                    des "grandes" et très "grandes" associations, moyennant le respect du principe de comparabilité des comptes annuels d’un exercice à l’autre. Dans ce cas, elles doivent tenir une comptabilité complète durant trois exercices
-                                    successifs ainsi qu'établir et publier des comptes annuels selon le même schéma abrégé ou complet. Dans cette optique, l’association concernée doit : - mentionner cette décision dans l’annexe, - justifier la décision
-                                    de changement de référentiel comptable (passage d’une comptabilité simplifiée à une comptabilité complète) dans l’annexe, - indiquer les principales conséquences de ce changement de référentiel. Si l'association veut
-                                    revenir (après minimum trois exercices) au système de la comptabilité simplifiée, la décision s'y rapportant doit être également mentionnée et justifiée à l'annexe aux comptes annuels, en indiquant les principales conséquences
-                                    qui en découlent pour l'association.
-                                </p>
-                                <h3>3.2 Dépassement des seuils définissant les « petites » associations </h3>
-                                <p>
-                                    Le dépassement des seuils définissant les "petites" associations découle du développement des activités de la "petite" association. A ce titre, notons qu'à partir du moment où l'association atteint au moins deux des critères fixés par la loi (voir ci-dessus
-                                    1.1.1), à la date de clôture de l’exercice social, elle doit passer, au cours de l’exercice comptable suivant, d'une comptabilité simplifiée à une comptabilité complète.
-                                </p>
-
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">3.1 Régime à option pour la « petite » association</h3>
+                                                    <p>
+                                                        Pour rappel et sauf règles particulières, les "petites" associations sont soumises à une comptabilité simplifiée telle que définie ci-dessus. Il est néanmoins permis à ces mêmes "petites" associations de se soumettre volontairement aux obligations comptables
+                                                        des "grandes" et très "grandes" associations, moyennant le respect du principe de comparabilité des comptes annuels d’un exercice à l’autre. Dans ce cas, elles doivent tenir une comptabilité complète durant trois exercices
+                                                        successifs ainsi qu'établir et publier des comptes annuels selon le même schéma abrégé ou complet. Dans cette optique, l’association concernée doit : - mentionner cette décision dans l’annexe, - justifier la décision
+                                                        de changement de référentiel comptable (passage d’une comptabilité simplifiée à une comptabilité complète) dans l’annexe, - indiquer les principales conséquences de ce changement de référentiel. Si l'association veut
+                                                        revenir (après minimum trois exercices) au système de la comptabilité simplifiée, la décision s'y rapportant doit être également mentionnée et justifiée à l'annexe aux comptes annuels, en indiquant les principales conséquences
+                                                        qui en découlent pour l'association.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">3.2 Dépassement des seuils définissant les « petites » associations </h3>
+                                                    <p class="card-text">
+                                                        Le dépassement des seuils définissant les "petites" associations découle du développement des activités de la "petite" association. A ce titre, notons qu'à partir du moment où l'association atteint au moins deux des critères fixés par la loi (voir ci-dessus
+                                                        1.1.1), à la date de clôture de l’exercice social, elle doit passer, au cours de l’exercice comptable suivant, d'une comptabilité simplifiée à une comptabilité complète.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,48 +272,94 @@
             </div>
             <!-- fin premier card -->
             <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#chapitreTwo">Chapitre 2</a>
+                <div class="card-header text-center" style="background-color:#FFFFFF;">
+                    <a class="card-link d-flex justify-content-center" data-toggle="collapse" href="#chapitreTwo"> <div class="d-flex justify-content-start" style="width:100%"> <h3>   <span class="p-2 badge badge-pill" style="background-color:#4A6700; color:aliceblue;" >Chapitre 2</span> <span class="p-2">Objectifs de transparance</span>  </h3> </div> </a>
                 </div>
                 <div id="chapitreTwo" class="collapse " data-parent="#accordion">
                     <div class="card-body">
                         <div class="jumbotron jumbotron-fluid">
                             <h1> <span class="badge badge-secondary">  Chapitre 2 </span> Objectifs de transparance</h1>
 
-                            <diV class="container">
-                                <h2>1. Transparence interne</h2>
-                                <h3>1.1 Etablissement des comptes annuels et d’un budget </h3>
-                                <p>
-                                    Par la loi du 2 mai 2002, les associations doivent établir les comptes annuels de l’exercice social écoulé ainsi qu'un budget pour l’exercice suivant. Chaque année et au plus tard six mois après la date de clôture de l’exercice social, les comptes annuels
-                                    et le budget sont présentés pour approbation à l’assemblée générale (ASBL) ou à l’organe général de direction (AISBL).
-                                </p>
-                                <h3>1.2 Les « comptes annuels » des petites associations</h3>
-                                <p>
+                            <div class="container">
+                                
+                                <ul class="nav nav-tabs flex-column" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#transpIn">Transparence interne</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#transpEx"> Transparence externe</a>
+                                    </li>
+                                </ul>
 
-                                    Les comptes annuels des "petites" associations sont constitués des documents suivants : - un état des dépenses et des recettes - une annexe reprenant : 1. d’une part, des informations obligatoires définies dans l’arrêté royal du 26 juin 2003; 2. d’autre
-                                    part, un état du patrimoine selon un schéma minimum fixé par l’arrêté royal du 26 juin 2003. Ces documents forment un tout et constituent les comptes annuels de l’association. Les comptes annuels sont formulés en EUR,
-                                    sans décimales et doivent être établis avec prudence, sincérité, bonne foi et clarté.
-                                </p>
-                                <h3>1.3 Le budget de l’association</h3>
-                                <p>
-                                    a législation relative à la comptabilité n'a pas prévu de schéma obligatoire pour le budget des associations. Mais pour pouvoir établir un comparatif clair, cohérent et compréhensible entre les comptes annuels et le budget, il est souhaitable que le schéma
-                                    du budget soit calqué sur celui des comptes annuels. Le bilan et le compte de résultats sont d'ailleurs des éléments qui reviennent régulièrement dans le processus budgétaire, à savoir, les budgets relatifs aux investissements,
-                                    au financement, aux liquidités et naturellement aux résultats. Si l'association souhaite reprendre davantage d'informations analytiques dans son budget, il lui est alors conseillé d'établir, au départ de cette approche
-                                    analytique, une synthèse dont la structure correspond à celle des comptes annuels.
-                                </p>
-                                <h3>1.4 Accès aux documents comptables </h3>
-                                <p>
-                                    Les membres peuvent consulter, au siège de l’association, le registre des membres, les procès-verbaux et les décisions de l’assemblée générale et du conseil d’administration ainsi que tous les documents comptables de l’association. A cette fin, ils adressent
-                                    une demande écrite au Conseil d’administration avec lequel ils conviendront d’une date et heure de consultation des documents et pièces. Ceux-ci ne pourront être déplacés.
-                                </p>
-                                <h2>2. Transparence externe</h2>
+                                <div class="tab-content">
+                                    <div id="transpIn" class="container tab-pane active">
 
-                                <p>
-                                    Les comptes annuels de la "petite" association doivent être repris dans le dossier tenu au greffe du Tribunal de Commerce (ASBL) ou au Ministère de la Justice (AISBL). Il n’existe pas d’obligation de dépôt des comptes annuels des "petites" associations
-                                    auprès de la Banque nationale de Belgique. La consultation des comptes annuels doit s'effectuer auprès du greffe du Tribunal de Commerce (ASBL) ou au Ministère de la Justice (AISBL).
-                                </p>
+                                            <h2>1. Transparence interne</h2>
+                                        <div class="card-group"> 
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">1.1 Etablissement des comptes annuels et d’un budget </h3>
+                                                    <p class="card-text">
+                                                        Par la loi du 2 mai 2002, les associations doivent établir les comptes annuels de l’exercice social écoulé ainsi qu'un budget pour l’exercice suivant. Chaque année et au plus tard six mois après la date de clôture de l’exercice social, les comptes annuels
+                                                        et le budget sont présentés pour approbation à l’assemblée générale (ASBL) ou à l’organe général de direction (AISBL).
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">1.2 Les « comptes annuels » des petites associations</h3>
+                                                    <p class="card-text">
 
-                            </diV>
+                                                        Les comptes annuels des "petites" associations sont constitués des documents suivants : - un état des dépenses et des recettes - une annexe reprenant : 1. d’une part, des informations obligatoires définies dans l’arrêté royal du 26 juin 2003; 2. d’autre
+                                                        part, un état du patrimoine selon un schéma minimum fixé par l’arrêté royal du 26 juin 2003. Ces documents forment un tout et constituent les comptes annuels de l’association. Les comptes annuels sont formulés en EUR,
+                                                        sans décimales et doivent être établis avec prudence, sincérité, bonne foi et clarté.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-group">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">1.3 Le budget de l’association</h3>
+                                                    <p class="card-text">
+                                                        la législation relative à la comptabilité n'a pas prévu de schéma obligatoire pour le budget des associations. Mais pour pouvoir établir un comparatif clair, cohérent et compréhensible entre les comptes annuels et le budget, il est souhaitable que le schéma
+                                                        du budget soit calqué sur celui des comptes annuels. Le bilan et le compte de résultats sont d'ailleurs des éléments qui reviennent régulièrement dans le processus budgétaire, à savoir, les budgets relatifs aux investissements,
+                                                        au financement, aux liquidités et naturellement aux résultats. Si l'association souhaite reprendre davantage d'informations analytiques dans son budget, il lui est alors conseillé d'établir, au départ de cette approche
+                                                        analytique, une synthèse dont la structure correspond à celle des comptes annuels.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">1.4 Accès aux documents comptables </h3>
+                                                    <p class="card-body">
+                                                        Les membres peuvent consulter, au siège de l’association, le registre des membres, les procès-verbaux et les décisions de l’assemblée générale et du conseil d’administration ainsi que tous les documents comptables de l’association. A cette fin, ils adressent
+                                                        une demande écrite au Conseil d’administration avec lequel ils conviendront d’une date et heure de consultation des documents et pièces. Ceux-ci ne pourront être déplacés.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div id="transpEx" class="container tab-pane fade">
+                                            <h2 class="card-title">2. Transparence externe</h2>
+                                        <div class="card"> 
+                                            
+                                            <div class="card-body"> 
+                                              
+
+                                                <p class="card-text">
+                                                Les comptes annuels de la "petite" association doivent être repris dans le dossier tenu au greffe du Tribunal de Commerce (ASBL) ou au Ministère de la Justice (AISBL). Il n’existe pas d’obligation de dépôt des comptes annuels des "petites" associations
+                                                auprès de la Banque nationale de Belgique. La consultation des comptes annuels doit s'effectuer auprès du greffe du Tribunal de Commerce (ASBL) ou au Ministère de la Justice (AISBL).
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,60 +367,154 @@
             </div>
             <!-- fin deuxieme card-->
             <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#chapitreThree"> Chapitre 3</a>
+                <div class="card-header text-center" style="background-color:#FFFFFF;">
+                    <a class="card-link d-flex justify-content-center" data-toggle="collapse" href="#chapitreThree"> <div class="d-flex justify-content-start" style="width:100%"> <h3>  <span class="p-2 badge badge-pill" style="background-color:#4A6700; color:aliceblue;"> Chapitre 3 </span>  <span class="p-2 ">Les principes comptables</span> </h3> </div></a>
                 </div>
                 <div id="chapitreThree" class="collapse " data-parent="#accordion">
                     <div class="card-body">
                         <div class="jumbotron jumbotron-fluid">
                             <h1> <span class="badge badge-secondary">  Chapitre 3 </span> Les principes comptables</h1>
                             <div class="container">
-                                <h2>1. Etablissement d'une comptabilité simplifiée</h2>
-                                <p>
-                                    Les "petites" associations doivent tenir une comptabilité simplifiée qui porte au minimum sur les mouvements des disponibilités en espèces et sur les comptes à vue. Cela signifie la tenue d’une comptabilité de caisse. Celle-ci comprend toutes les opérations
-                                    suivantes : - les dépenses et recettes en espèces ; - les mouvements effectués sur les comptes à vue comparables à des mouvements de caisse ; - à l’exclusion des comptes à terme que nous retrouverons dans l’inventaire
-                                    en fin d’exercice (voir ci-dessous).
-                                </p>
-                                <h2>2. Enregistrement dans un livre comptable unique</h2>
-                                <p>
-                                    Les mouvements de caisse et ceux effectués sur les comptes à vue sont inscrits sans retard, de manière fidèle, complète et dans l'ordre chronologique dans un livre comptable unique. Tous les mouvements autres que ceux visés ci-dessus ne doivent pas être
-                                    enregistrés dans ce livre comptable. En ce sens, la comptabilité simplifiée ne peut pas être assimilée à une comptabilité complète en partie double telle qu'elle est prévue par le droit comptable. Actuellement ce livre
-                                    est coté, paginé de manière inaltérable et identifié par la dénomination de l’association. Avant sa première utilisation et ensuite chaque année, ce livre comptable unique est signé par la ou les personnes qui représentent
-                                    l’association à l’égard des tiers. Le livre original doit être conservé pendant dix ans à partir du 1 er janvier qui suit l'année de clôture.
-                                </p>
-                                <h2>3. Inscription immédiate</h2>
-                                <p>
-                                    Toutes les opérations et mouvements ainsi visés doivent être enregistrés sans retard, c'est-à-dire sans délai dès que le paiement est exécuté ou reçu.
-                                </p>
-                                <h2>4. Prudence, sincérité et bonne foi. Les pièces justificatives</h2>
-                                <p>
-                                    Toutes les opérations sont traduites dans le livre unique de manière prudente, sincère et de bonne foi. Ceci signifie que toute écriture doit s’appuyer sur une pièce justificative datée (interne ou externe), à laquelle elle se réfère. Ainsi, en cas de
-                                    don manuel en espèces, il faudra établir une pièce justificative interne.Les pièces justificatives originales ou leur copie doivent être classées méthodiquement et conservées durant dix ans. Ce délai est réduit à trois
-                                    ans pour les pièces qui ne sont pas destinées à être opposées aux tiers. Il est à remarquer qu’aucune compensation entre recettes et dépenses n’est permise.
+                                <ul class="nav nav-tabs flex-column" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#etabComp"> Etablissement d'une comptabilité simplifiée</a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#enregComp"> Enregistrement dans un livre comptable unique</a>
+                                      </li>
+                                      <li class="nav-item">
+                                         <a class="nav-link" data-toggle="tab" href="#inscrIm">Inscription immédiate</a>
+                                     </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#prudSin">Prudence, sincérité et bonne foi. Les pièces justificatives</a>
+                                    </li>
+                                     <li class="nav-item">
+                                         <a class="nav-link" data-toggle="tab" href="#inscrChro">Inscription chronologique</a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#contEcr ">Continuité des écritures</a>
+                                    </li>
+                                    <li class="nav-item">
+                                         <a class="nav-link" data-toggle="tab" href="#modMin"> Modèle minimun</a>
+                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#entreVig" > Entrée en vigueur</a>
+                                    </li>
+                                </ul>
 
-                                </p>
-                                <h2>5. Inscription chronologique</h2>
-                                <p>
-                                    Les diverses opérations et mouvements doivent être inscrits chronologiquement.
-                                </p>
-                                <h2>6. Continuité des écritures</h2>
-                                <p>
-                                    Les opérations doivent être inscrites dans le livre unique sans blanc, ni omissions. Cette manière de procéder permet de garantir une continuité matérielle ainsi qu'une régularité et une irréversibilité des écritures comptables. En cas de rectification,
-                                    l’écriture primitive doit rester visible. Le collage de documents informatiques est toujours possible à condition de garantir la continuité matérielle et la force probante de la comptabilité. A cette fin, les administrateurs
-                                    signeront le listing informatique et le livre sur lequel ce listing est collé.
-                                </p>
-                                <h2>7. Modèle minimun</h2>
-                                <p>
-                                    Ce modèle de livre unique est un modèle minimum. Il peut être développé et adapté à la nature et à l’étendue des activités de la petite association. Néanmoins, dans certaines circonstances, par exemple lorsque l’association doit fournir à une autorité
-                                    subsidiante des informations relatives à des projets particuliers ou à des activités spécifiques, il lui sera utile de mettre en place un système, d’enregistrement analytique permettant de dégager les dépenses et les
-                                    recettes y afférentes.
+                                <div class="tab-content"> 
 
-                                </p>
-                                <h2>8. Entrée en vigueur</h2>
-                                <p>
-                                    Pour les associations existantes avant la date du 1er janvier 2004 et si l'exercice correspond à l'année calendrier, les obligations comptables entreront en vigueur à partir du 1er janvier 2005. Si l'exercice ne correspond pas à l'année calendrier, les
-                                    obligations comptables entreront en vigueur au début du prochain exercice (après le 1 er janvier 2005). Les associations constituées à partir du 1 er janvier 2004 doivent suivre immédiatement le nouveau système.
-                                </p>
+                                    <div id="etabComp" class="container tab-pane active">
+
+                                        <h2>1. Etablissement d'une comptabilité simplifiée</h2>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Les "petites" associations doivent tenir une comptabilité simplifiée qui porte au minimum sur les mouvements des disponibilités en espèces et sur les comptes à vue. Cela signifie la tenue d’une comptabilité de caisse. Celle-ci comprend toutes les opérations
+                                                    suivantes :
+                                                    <ul> 
+                                                        <li> les dépenses et recettes en espèces ;</li> 
+                                                        <li> les mouvements effectués sur les comptes à vue comparables à des mouvements de caisse ;</li> 
+                                                        <li> à l’exclusion des comptes à terme que nous retrouverons dans l’inventaire
+                                                    en fin d’exercice (voir ci-dessous).</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="enregComp" class="container tab-pane fade">
+                                        <h2>2. Enregistrement dans un livre comptable unique</h2>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Les mouvements de caisse et ceux effectués sur les comptes à vue sont inscrits sans retard, de manière fidèle, complète et dans l'ordre chronologique dans un livre comptable unique. Tous les mouvements autres que ceux visés ci-dessus ne doivent pas être
+                                                    enregistrés dans ce livre comptable. En ce sens, la comptabilité simplifiée ne peut pas être assimilée à une comptabilité complète en partie double telle qu'elle est prévue par le droit comptable. Actuellement ce livre
+                                                    est coté, paginé de manière inaltérable et identifié par la dénomination de l’association. Avant sa première utilisation et ensuite chaque année, ce livre comptable unique est signé par la ou les personnes qui représentent
+                                                    l’association à l’égard des tiers. Le livre original doit être conservé pendant dix ans à partir du 1 er janvier qui suit l'année de clôture.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="inscrIm" class="container tab-pane fade">
+                                        <h2>3. Inscription immédiate</h2>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Toutes les opérations et mouvements ainsi visés doivent être enregistrés sans retard, c'est-à-dire sans délai dès que le paiement est exécuté ou reçu.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="prudSin" class="container tab-pane fade">
+                                        <h2>4. Prudence, sincérité et bonne foi. Les pièces justificatives</h2>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Toutes les opérations sont traduites dans le livre unique de manière prudente, sincère et de bonne foi. Ceci signifie que toute écriture doit s’appuyer sur une pièce justificative datée (interne ou externe), à laquelle elle se réfère. Ainsi, en cas de
+                                                    don manuel en espèces, il faudra établir une pièce justificative interne.Les pièces justificatives originales ou leur copie doivent être classées méthodiquement et conservées durant dix ans. Ce délai est réduit à trois
+                                                    ans pour les pièces qui ne sont pas destinées à être opposées aux tiers. Il est à remarquer qu’aucune compensation entre recettes et dépenses n’est permise.
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="inscrChro" class="container tab-pane fade">
+                                        <h2>5. Inscription chronologique</h2>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Les diverses opérations et mouvements doivent être inscrits chronologiquement.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="contEcr" class="container tab-pane fade"> 
+                                        <h2>6. Continuité des écritures</h2>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Les opérations doivent être inscrites dans le livre unique sans blanc, ni omissions. Cette manière de procéder permet de garantir une continuité matérielle ainsi qu'une régularité et une irréversibilité des écritures comptables. En cas de rectification,
+                                                    l’écriture primitive doit rester visible. Le collage de documents informatiques est toujours possible à condition de garantir la continuité matérielle et la force probante de la comptabilité. A cette fin, les administrateurs
+                                                    signeront le listing informatique et le livre sur lequel ce listing est collé.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="modMin" class="container tab-pane fade">
+                                        <h2>7. Modèle minimun</h2>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Ce modèle de livre unique est un modèle minimum. Il peut être développé et adapté à la nature et à l’étendue des activités de la petite association. Néanmoins, dans certaines circonstances, par exemple lorsque l’association doit fournir à une autorité
+                                                    subsidiante des informations relatives à des projets particuliers ou à des activités spécifiques, il lui sera utile de mettre en place un système, d’enregistrement analytique permettant de dégager les dépenses et les
+                                                    recettes y afférentes.
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="entreVig" class="container tab-pane fade">
+                                        <h2>8. Entrée en vigueur</h2>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Pour les associations existantes avant la date du 1er janvier 2004 et si l'exercice correspond à l'année calendrier, les obligations comptables entreront en vigueur à partir du 1er janvier 2005. Si l'exercice ne correspond pas à l'année calendrier, les
+                                                    obligations comptables entreront en vigueur au début du prochain exercice (après le 1 er janvier 2005). Les associations constituées à partir du 1 er janvier 2004 doivent suivre immédiatement le nouveau système.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -227,28 +522,67 @@
             </div>
             <!-- fin troisième -->
             <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#chapitreFour">Chapitre 4</a>
+                <div class="card-header text-center" style="background-color:#FFFFFF;">
+                    <a class="card-link d-flex justify-content-center" data-toggle="collapse" href="#chapitreFour"> <div class=" d-flex justify-content-start" style="width:100%;  ">  <h3> <span class="p-2 badge badge-pill" style="background-color:#4A6700; color:aliceblue;">Chapitre 4</span> <span class="p-2">L'état de dépenses et recettes </h3></span> </div> </a>
                 </div>
                 <div id="chapitreFour" class="collapse " data-parent="#accordion">
                     <div class="card-body">
                         <div class="jumbotron jumbotron-fluid">
                             <h1> <span class="badge badge-secondary">  Chapitre 4 </span> L'état de dépenses et recettes</h1>
                             <diV class="container">
-                                <h2>1. Principes généraux</h2>
-                                <p>
-                                    L'état des dépenses et des recettes découle directement du livre comptable unique. Cet état annuel de synthèse (dépenses/recettes) est établi selon un schéma minimum. Comme pour les autres documents comptables, il pourra être adapté à la nature et à l’étendue
-                                    des activités de l’association. Cet état annuel des dépenses et recettes constitue la première partie des comptes annuels de l’association. Il reprend les totaux des différentes rubriques du livre comptable unique.
-                                    Cet état comptable doit indiquer systématiquement pour l’exercice clôturé : - la nature et - le montant des dépenses et des recettes de l’association.
-                                </p>
-                                <h2>2. Qu'entend-t-on par "recettes" et "dépenses"?</h2>
-                                <p>
-                                    Par recettes, on entend les encaissements en espèces et les encaissements sur des comptes à vue. Par dépenses, on entend les décaissements en espèces et les décaissements via des comptes à vue.
-                                </p>
-                                <h2>3. Compensation</h2>
-                                <p>
-                                    Toute compensation entre des recettes et des dépenses est interdite.
-                                </p>
+
+                                <ul class="nav nav-tabs flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#prinGen">Principes généraux</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#recetDep">Qu'entend-t-on par "recettes" et "dépenses"?</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#compEns">Compensation</a>
+                                    </li>
+
+                                </ul>
+
+                                <div class="tab-content">
+                                    
+                                    <div id="prinGen" class="container tab-pane active">
+                                        <h2>1. Principes généraux</h2>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    L'état des dépenses et des recettes découle directement du livre comptable unique. Cet état annuel de synthèse (dépenses/recettes) est établi selon un schéma minimum. Comme pour les autres documents comptables, il pourra être adapté à la nature et à l’étendue
+                                                    des activités de l’association. Cet état annuel des dépenses et recettes constitue la première partie des comptes annuels de l’association. Il reprend les totaux des différentes rubriques du livre comptable unique.
+                                                    Cet état comptable doit indiquer systématiquement pour l’exercice clôturé : - la nature et - le montant des dépenses et des recettes de l’association.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="recetDep" class="container tab-pane fade"> 
+                                        <h2>2. Qu'entend-t-on par "recettes" et "dépenses"?</h2>
+                                        <div class="card">
+                                           <div class="card-body">
+                                                 <p class="card-text">
+                                                    Par recettes, on entend les encaissements en espèces et les encaissements sur des comptes à vue. Par dépenses, on entend les décaissements en espèces et les décaissements via des comptes à vue.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="compEns" class="container tab-pane fade">
+                                        <h2>3. Compensation</h2>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Toute compensation entre des recettes et des dépenses est interdite.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </diV>
                         </div>
                     </div>
@@ -256,8 +590,8 @@
             </div>
             <!-- fin quatrième -->
             <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#chapitreFive">Chapitre 5</a>
+                <div class="card-header text-center" style="background-color:#FFFFFF;">
+                    <a class="card-link d-flex justify-content-center" data-toggle="collapse" href="#chapitreFive" style="display:block"> <div class=" d-flex justify-content-start" style="width:100%">  <h3> <span class=" badge badge-pill " style="background-color:#4A6700; color:aliceblue;">Chapitre 5</span>   <span class="p-2">L'annexe</span> </div> </h3></a>
                 </div>
                 <div id="chapitreFive" class="collapse " data-parent="#accordion">
                     <div class="card-body">
@@ -266,13 +600,245 @@
 
                             <h1> <span class="badge badge-secondary">  Chapitre 5</span> L'annexe </h1>
 
-                            <diV class="container">
-                                <h2>1. L'inventaire</h2>
-                                <h2>2. Schéma minimum normalisé de l'état du patrimoine (C.4)</h2>
-                                <h2>3. Résumé des règles d'évaluation </h2>
-                                <h2>4. Modification des règles d'évaluation </h2>
-                                <h2>5. Informations complémentaires</h2>
-                            </diV>
+                            <div class="container">
+
+                                <ul class="nav nav-tabs flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#invenT">L'inventaire</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#schMin">Schéma minimum normalisé de l'état du patrimoine (C.4)</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#resReg">Résumé des règles d'évaluation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class=" nav-link" data-toggle="tab" href="#modRegEv">Modification des règles d'évaluation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#infCom"> Informations complémentaires</a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="invenT" class="container tab-pane active">
+                                        <h2>1. L'inventaire</h2>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h3 class="card-title">  1.1. Principes généraux </h3>
+                                                <p class="card-text">
+                                                    Au moins une fois par an, l'association dresse l'inventaire des avoirs, des créances, des dettes, des droits et des obligations de toute nature. Les relevés, les vérifications, les examens et les évaluations nécessaires sont effectués avec prudence, sincérité et bonne foi. 
+                                                    A cette fin, l'association établit une liste complète de tous les avoirs physiques tels que les terrains, les bâtiments, les installations, les machines, le matériel et les stocks. En outre, elle examine aussi toutes les créances, les liquidités et les dettes, et fait de même avec les droits et les engagements. 
+                                                    Une fois cette liste établie, elle évalue les avoirs physiques en tenant compte de l'usure éventuelle. L'association examine également le niveau de recouvrabilité des créances et les montants qui devront être payés.  
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h3 class="card-title">1.2. Quand faut-il dresser l'inventaire ?</h3>
+                                                <p class="card-text">
+                                                    L'inventaire doit être établi au moins une fois par exercice, à une date choisie librement et qui correspond la plupart du temps à la fin de l'exercice. 
+                                                    C'est à cette date qu'il faut établir l'état du patrimoine sur base de l'inventaire. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h3 class="card-title"> 1.3. Quel est l'importance de cet inventaire ?</h3>
+                                                <p class="card-text">
+                                                    Un aperçu des dépenses et des recettes est important pour se faire une idée de toutes les dépenses et de toutes les recettes en liquide ou via un compte bancaire, découlant des activités de l'association. 
+                                                    L'enregistrement des activités ne nous permet pas de connaître de quels propriétés, biens et créances dispose l'association, ni de quelles dettes elle doit s'acquitter. A cet effet, l'inventaire donne, à un moment déterminé, un aperçu de tous les avoirs, dettes, droits et engagements que possède l'association. 
+                                                    Comme le total des avoirs constitue le critère déterminant pour savoir si on reste ou non une "petite" association, (voir chapitre 1, 1.1.3) l'établissement de cet inventaire est nécessaire. 
+                                                    <br/>
+                                                    L'inventaire doit être rapporté d'une façon concise dans "L'état du patrimoine" qui constitue une partie de l’ annexe. 
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="schMin" class="container tab-pane fade">
+                                        <h2>2. Schéma minimum normalisé de l'état du patrimoine (C.4)</h2>
+
+                                    </div>
+                                    <div id="resReg" class="container tab-pane fade">
+                                        <h2>3. Résumé des règles d'évaluation </h2>
+
+                                        <div class="card-group">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"> 
+                                                            3.1. Principes de base </h3>
+                                                    <p class="card-text">
+                                                        La présentation des avoirs, des dettes, des droits et des engagements se fait habituellement à leur valeur réelle. Cela signifie que l'on doit disposer de règles d'évaluation. L'organe de gestion de l'association détermine librement les critères qui président aux évaluations dans l'inventaire, tout en tenant compte des caractéristiques propres à l'association. Il est évident que ces règles doivent aboutir à un compte-rendu fidèle des avoirs, des dettes, des droits et des engagements et ne pas avoir pour finalité de maintenir le critère "total du bilan", mentionné dans le chapitre 1 ci-dessus, sous le seuil de 1.000.000,- EUR. 
+                                                        <br/>
+                                                        Ces règles sont résumées dans l’ annexe. Celles-ci doit au minimum comporter : 
+                                                        <ul>
+                                                            <li>un résumé des règles d'évaluation (ce résumé doit être suffisamment précis pour permettre d’apprécier les méthodes d’évaluation adoptées) ;</li>
+                                                            <li>les modifications apportées aux règles d'évaluation existantes;</li>
+                                                            <li>les renseignements complémentaires ; </li>
+                                                            <li>l'état minimum normalisé du patrimoine (voir ci-dessus au point 2) </li> 
+                                                        </ul>
+                                                    </p>
+                                                    
+                                                </div>
+
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">3.2. Résumé des règles d'évaluation</h3>
+                                                    <p class="card-text">
+                                                            Le Conseil d'administration établit les règles qui permettent de donner une valeur à chaque élément du patrimoine de l'association en tenant compte des principes de prudence, de sincérité et de bonne foi. 
+                                                            
+                                                            Ces règles précisent par exemple : 
+                                                            <ul>
+                                                                <li>la manière dont on détermine la dépréciation des actifs immobilisés ; </li>
+                                                                <li>la manière dont on intègre le risque de non-recouvrabilité des créances ;</li>
+                                                                <li>les règles par lesquelles on exprime les avoirs et les dettes en espèces chaque fois que l'on doit établir l'état du patrimoine ;</li>
+                                                                <li> les cours de change utilisés lors de transferts financiers internationaux.</li>
+                                                            </ul>
+                                                            L'association n'est pas obligée de tenir un livre d'inventaire. 
+                                                    </p>
+                                                    
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="card-group">
+
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">  3.3. Les règles d'évaluation concernant les avoirs et les dettes repris dans l'état du patrimoine</h3>
+                                                    <p class="card-text">
+                                                            Les règles d'évaluation établies par le Conseil d'administration avec prudence et bonne foi, doivent suivre la pratique en vigueur en ce qui concerne l'évaluation. 
+                                                            On tient habituellement compte des notions de valeur de marché et de valeur d'usage. 
+                                                            
+                                                            Il existe plusieurs approches possibles pour l'établissement de la valeur de marché telles que :
+                                                        <ul> 
+                                                                <li>la valeur d'acquisition actuelle des biens achetés l'année précédente,</li>
+                                                                <li>la valeur d'acquisition des biens achetés avec application d'un coefficient de vieillissement.</li>
+                                                            </ul>
+                                                            Si on ne peut plus établir la valeur de marché, on va alors préférer la valeur d'usage. 
+                                                            Ceci signifie que l'on va calculer la contribution des ces avoirs à l'activité de l'association et en déterminer la valeur sur base de ce critère. 
+                                                            Il s'agit, la plupart du temps, de la valeur en numéraire des revenus nets futurs provenant de l'utilisation de ces avoirs. 
+                                                            <br/>
+                                                            Lorsque ni la valeur de marché, ni la valeur d'usage ne peuvent être déterminées, cela fera l'objet d'une inscription pour mémoire dans l'état du patrimoine avec une mention appropriée dans l’ annexe. 
+                                                            Cela sera le cas pour des avoirs matériels que l'association possède déjà depuis des années et pour lesquels aucun critère d'appréciation objectif ne peut réellement être utilisé (patrimoine culturel, biens dévolus par succession, etc., souvent acquis via des dons). 
+                                                            Une inscription qualitative sans mention de valeur dans l’ annexe, assurera l'information nécessaire. 
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">  3.4. La problématique particulière de la première application</h3>
+                                                    <p class="card-text">
+                                                        Lors de la première application, l'association peut être confrontée à différentes situations : 
+                                                        <ul>
+                                                           <li>l'association n'a jamais dressé un état des avoirs et des dettes. Dans ce cas, elle devra partir de zéro. Elle dressera un inventaire de tous les avoirs et de toutes les dettes à l'occasion de l'inventaire au moment de la première application et, tout en tenant compte du point 3.3 ci-dessus, elle en attribuera une valeur appropriée.</li>
+                                                            
+                                                            <li>l'association a toujours dressé dans le passé un état des avoirs et des dettes. Elle vérifie dans ce cas si les règles utilisées dans le passé correspondent au point 3.3 ci-dessus. Sinon, elle procède aux adaptations nécessaires.</li>
+                                                        </ul>
+                                                            Nous voulons enfin faire remarquer que la "petite" association ne doit appliquer les règles d'évaluation que pour dresser l'état du patrimoine. Ceci ne se produit qu'à la fin de l'exercice. Il n'est donc pas question de dresser un inventaire au début de l'exercice lors de la première application. 
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="card-group">
+                                            
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"> 3.5. Evaluation des droits et des engagements</h3>
+                                                    <p class="card-text">
+                                                         Comme les "droits" et les "engagements" ne sont pas réalisés . 
+                                                         La valeur qui leur est attribuée n'est qu'une indication de ce que le "droit" signifie potentiellement en tant que recette future et "l'engagement" en tant que dépense potentielle pour l'association. 
+                                                         Ainsi, pour les promesses de subsides et de dons, on indiquera le montant auquel on peut s'attendre en tenant compte de ce que l'association pourra réaliser. 
+                                                         (Le Conseil d'administration doit faire une estimation des conditions que l'association pourra remplir). Pour les hypothèques et les promesses d'hypothèques, on indiquera la valeur de l’indemnité que le preneur d'hypothèque (potentiel) pourrait exiger si l'association ne remplissait pas ses engagement à son égard. 
+                                                        <br/> 
+                                                        En ce qui concerne les garanties accordées, les mêmes règles prévalent. Il faut mentionner : 
+                                                        <ul>  
+                                                            <li>l'importance des montants dont l'association est encore redevable vis-à-vis des bénéficiaires d'une garantie,</li>
+                                                            
+                                                            <li>l'importance des montants pour lesquels l'association s'est engagée, s'il s'agit d'une garantie au profit d'un tiers (p.e. une association affiliée). Un tiers ne peut pas savoir quel est le niveau de solvabilité de l'association affiliée. On doit donc indiquer l'engagement global.</li>
+                                                        </ul>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"> 3.6. Exemption d'évaluation</h3>
+                                                    <p class="card-text">
+                                                        Les avoirs et les dettes difficilement évaluables sur une base rationnelle ne doivent pas être
+                                                        mentionnés. Ils sont enregistrés pour mémoire dans l'état du patrimoine. Il faut en donner une
+                                                        information qualitative dans l’ annexe. La liberté d'appréciation repose sur l'organe de gestion qui ne
+                                                        peut cependant pas avoir comme conséquence que le total du bilan de 1. 000 000,- EUR n’est pas
+                                                        atteint.               
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="modRegEv" class="container tab-pane fade">
+                                        <h2>4. Modification des règles d'évaluation </h2>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Les règles d’évaluation et leur application doivent être en principe identiques d’un exercice à l’autre. Toutefois, elles doivent être adaptées au cas où elles ne permettraient plus de procéder, avec prudence, sincérité, bonne foi et clarté à l’établissement de l’inventaire. 
+                                                    <br/>
+                                                    Ces modifications sont mentionnées et justifiées dans l’ annexe. L’estimation de l’influence de ces adaptations est mentionnée dans l’ annexe concernant les comptes de l’exercice au cours duquel cette adaptation a été introduite pour la première fois. 
+                                                    <br/>
+                                                    Voici des exemples de modifications des règles d'évaluation :
+                                                    <ul>
+                                                        <li>changement de règles concernant la dépréciation des actifs immobilisés, </li>
+                                                        <li>changement de règles concernant l'estimation du risque de non-recouvrement des créances (réductions de valeur), </li>
+                                                        <li>…</li> 
+                                                    </ul>
+                                                    Si l'association se trouve dans une situation de discontinuité, les règles d'évaluation seront adaptées pour réduire tous les avoirs à leur valeur de réalisation estimée. 
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="infCom" class="container tab-pane fade">
+                                        <h2>5. Informations complémentaires</h2>
+
+                                        <div class="card">
+
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                        Les comptes annuels sont établis avec prudence, sincérité, bonne foi et clarté. Si l'application de ces principes ne suffit pas pour y parvenir, le Conseil d'administration doit fournir des informations complémentaires dans l’ annexe. 
+                                                        <br/>
+                                                        Les « informations complémentaires » peuvent être relatives : 
+                                                        <ul>
+                                                            <li> à la mise à disposition de biens à titre gratuit (tant immobiliers que mobiliers) sans la moindre contrepartie, </li> 
+                                                            <li> aux droits que l'association peut faire valoir concernant des prestations effectuées par des tiers sans indemnisation en contrepartie,</li>
+                                                            <li> à des renseignements additionnels à ceux exigés légalement afin d'améliorer la transparence. </li> 
+                                                         </ul>
+                                                        <br/>
+                                                        Par exemple : 
+                                                        <ul>
+                                                            <li>l' information sur un certain nombre de spécificités de fonctionnement. On peut ainsi expliquer (de manière qualitative) quelles sont les prestations qui ont été accomplies par l'association pendant l'exercfice et les efforts déployés pour y parvenir. Un aperçu chiffré peut être fourni de même qu'un commentaire sur la gestion et ceci, dans une perspective chronologique, par zone géographique ou par centre d'activités ; </li>
+                                                            <li>on peut donner une vue d'ensemble du budget et de son utilisation pour l'exercice écoulé ; </li>
+                                                            <li>scinder les dépenses et les recettes ainsi que les avoirs et les dettes des plus importants centres d'activités de l'association. </li>
+                                                        </ul>
+
+                                                </p>
+                                            </div>
+                                        </div>    
+                                    
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -282,32 +848,78 @@
         </div>
 
     </div>
-    <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0px;">
-
-        <div class="row">
-            <div class="col">
-                <div class="container">
-                    <div class="list-group">
-                        <a href="http://www.bnb.be/" class="list-group-item">Banque Nationale de Belgique</a>
-                        <a href="http://www.centraledesbilans.be" class="list-group-item">Centrale des bilans</a>
-                        <a href="http://www.cnc-cbn.be" class="list-group-item">Commission des Normes Comptables</a>
-                        <a href="http://fisconet.fgov.be" class="list-group-item">Fisconet</a>
-                        <a href="http://www.kbs-frb.be" class="list-group-item">Fondation Roi Baudouin</a>
-                        <a href="http://www.iec-iab.be" class="list-group-item">Institut des Experts-comptables et des Conseil fiscaux</a>
-                        <a href="http://www.ibr-ire.be" class="list-group-item">Institut des Réviseurs d’ Entreprises</a>
-                        <a href="http://www.ipcf.be/" class="list-group-item">Institut Professionnel des Comptables et Fiscalistes Agréés</a>
-                        <a href="http://www.just.fgov.be/" class="list-group-item">Ministère de la Justice</a>
-                        <a href="http://www.ejustice.just.fgov.be" class="list-group-item">Moniteur Belge</a>
+    <div class=" p-2 jumbotron jumbotron-fluid" style="background-color:#A1C000;">
+        <div class="card-group">
+          
+            <div class="card ">
+                <div class="card-body">
+                        <h4 class="card-title text-center"> Quelques liens </h4>
+                    <div class="card" style="background-color: #89A600">
+                        
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="http://www.bnb.be/" class="list-group-item" style="background-color:#FFFFFF;">Banque Nationale de Belgique</a>
+                                <a href="http://www.centraledesbilans.be" class="list-group-item" style="background-color:#FFFFFF;">Centrale des bilans</a>
+                                <a href="http://www.cnc-cbn.be" class="list-group-item" style="background-color:#FFFFFF;">Commission des Normes Comptables</a>
+                                <a href="http://fisconet.fgov.be" class="list-group-item" style="background-color:#FFFFFF;">Fisconet</a>
+                                <a href="http://www.kbs-frb.be" class="list-group-item" style="background-color:#FFFFFF;">Fondation Roi Baudouin</a>
+                                <a href="http://www.iec-iab.be" class="list-group-item" style="background-color:#FFFFFF;">Institut des Experts-comptables et des Conseil fiscaux</a>
+                                <a href="http://www.ibr-ire.be" class="list-group-item" style="background-color:#FFFFFF;">Institut des Réviseurs d’ Entreprises</a>
+                                <a href="http://www.ipcf.be/" class="list-group-item" style="background-color:#FFFFFF;">Institut Professionnel des Comptables et Fiscalistes Agréés</a>
+                                <a href="http://www.just.fgov.be/" class="list-group-item" style="background-color:#FFFFFF;">Ministère de la Justice</a>
+                                <a href="http://www.ejustice.just.fgov.be" class="list-group-item" style="background-color:#FFFFFF;">Moniteur Belge</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <div class="card"> 
+                <div class="card-body"  >
+                    <h4 class="card-title text-center">Une gestion nécessaire</h4>   
+                    <div class="card">
+                        <img class="card-img-top" src="images/13.jpg" alt="Image Fond" >
+                        <div class="card-body" style="background-color: #4A6700">
+                            <p class="p-2 card-text  "  style="color:rgb(240, 248, 255)">
+                                    La gestion d'une petite association a été pensée par des expérts qui nous ont donnés suffisamment d'outils. 
+                                    <br/>
+                                    Le conseil d'administration aura toujours un support sur lequel s'appuyer en cas de problématique lié à la gestion.  
+                            </p>
+                        </div>
+                    </div>
+                 </div>
+                
+            </div>
+                
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title text-center"> Écrivez-nous !</h4>
+                       <div class=" p-3 container" style="background-color: #89A600; color:aliceblue"> 
+                            <form method="POST" action="index.php">
+                                <div class="form-group">
+                                    <label for="nom">Nom : </label>
+                                    <input type="text" id="nom" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="prenom">Prénom : </label>
+                                    <input type="text" class="form-control" id="prenom">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email : </label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message : </label>
+                                    <textarea class="form-control" rows="5" id="message">
 
+                                    </textarea>
+                                </div>
+                                <button type="submit" class="btn" style="color:aliceblue;background-color:#3A5500">Envoyez</button>
+                             </form>
+                        </div>
+                </div>
             </div>
         </div>
-
-
     </div>
 </body>
 
